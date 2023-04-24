@@ -14,7 +14,7 @@ The project consists of the following packages:
 * turtlebot_rviz_launchers: This package contains the rviz launch file.
 
 
-# # Directories
+## Directories
 map: Inside this directory, you will store your gazebo world file and the map generated from SLAM.
 scripts: Inside this directory, you’ll store your shell scripts.
 rvizConfig: Inside this directory, you’ll store your customized rviz configuration files.
