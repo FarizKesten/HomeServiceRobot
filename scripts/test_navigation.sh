@@ -4,21 +4,16 @@
 
 # Launch turtlebot
 source devel/setup.bash
-export TURTLEBOT_GAZEBO_WORLD_FILE=/home/workspace/catkin_ws/src/turtlebot_simulator/turtlebot_gazebo/worlds/corridor.world
+export TURTLEBOT_GAZEBO_WORLD_FILE=/home/workspace/catkin_ws/src/turtlebot_simulator/turtlebot_gazebo/worlds/playground.world
 xterm -e " roslaunch turtlebot_gazebo turtlebot_world.launch " &
 sleep 3
 
 # Launch gmapping demo
 source devel/setup.bash
-xterm -e " roslaunch turtlebot_gazebo gmapping_demo.launch " &
+xterm -e " roslaunch turtlebot_gazebo amcl_demo.launch " &
 sleep 3
 
 # Launch rviz
 source devel/setup.bash
 xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch " &
-sleep 3
-
-# Launch teleop
-source devel/setup.bash
-xterm -e " roslaunch turtlebot_teleop keyboard_teleop.launch " &
 sleep 3
