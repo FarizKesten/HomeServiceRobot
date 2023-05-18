@@ -11,6 +11,7 @@ void send_robot_to_position(MoveBaseClient & ac, double x, double y, double rotZ
   move_base_msgs::MoveBaseGoal goal;
 
   // set up the frame parameters
+  // goal.target_pose.header.frame_id = "map";
   goal.target_pose.header.frame_id = "odom";
   goal.target_pose.header.stamp = ros::Time::now();
 
@@ -18,6 +19,7 @@ void send_robot_to_position(MoveBaseClient & ac, double x, double y, double rotZ
   goal.target_pose.pose.position.x = x;
   goal.target_pose.pose.position.y = y;
   goal.target_pose.pose.orientation.z = rotZ;
+  // goal.target_pose.pose.orientation.w = (1.0 - rotZ * rotZ);
 
   // Send the goal position and orientation for the robot to reach
   ROS_INFO("Sending goal to  x:%f y:%f z:%f", x, y, rotZ);
@@ -46,10 +48,10 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
 
-  send_robot_to_position(ac, 1.0, 2.0, -0.707);
+  send_robot_to_position(ac, 2.0, 3.0, -0.707);
   ROS_INFO("Successfully reached the first position");
   sleep(5); // wait after the pickup-zone is reached
-  send_robot_to_position(ac, -0.5, 2.0, 0.707);
+  send_robot_to_position(ac, 0.5, -0.5, 0.707);
   ROS_INFO("Successfully reached the second position");
 
   return 0;
