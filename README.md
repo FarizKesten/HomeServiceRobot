@@ -5,6 +5,8 @@
 
 ## Project Setup
 The project consists of the following packages:
+* pick_objects: This package contains module that dictates robot's movement from a pick-up location to a destination
+* add_markers: This package contains module that simulates object that will be picked up by the robot and places to the destination
 * my_robot: This package contains the robot URDF and the robot’s Gazebo launch files.(taken from previous project)
 * teleop_twist_keyboard: This package contains a node that will allow you to manually control your robot.
 * slam_gmapping: This package contains the Gmapping SLAM node.
@@ -13,10 +15,4 @@ The project consists of the following packages:
 * turtlebot_teleop: This package contains the keyboard teleop node.
 * turtlebot_rviz_launchers: This package contains the rviz launch file.
 
-
-## Directories
-map: Inside this directory, you will store your gazebo world file and the map generated from SLAM.
-scripts: Inside this directory, you’ll store your shell scripts.
-rvizConfig: Inside this directory, you’ll store your customized rviz configuration files.
-pick_objects: You will write a node that commands your robot to drive to the pickup and drop off zones.
-add_markers: You will write a node that model the object with a marker in rviz.
+[video.webm](https://github.com/FarizKesten/HomeServiceRobot/assets/32988360/a713591d-b130-4597-8190-50e9d4edffc1)
