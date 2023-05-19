@@ -5,7 +5,7 @@
 #include <cmath>
 
 double robot_pose[2];
-double distance_thresh = 0.5;
+double distance_thresh = 0.65;
 
 
 void get_pose(const nav_msgs::Odometry::ConstPtr& msg)
