@@ -20,7 +20,7 @@ void send_robot_to_position(MoveBaseClient & ac, double x, double y, double rotZ
   goal.target_pose.pose.position.x = x;
   goal.target_pose.pose.position.y = y;
   goal.target_pose.pose.orientation.z = rotZ;
-  // goal.target_pose.pose.orientation.w = (1.0 - rotZ * rotZ);
+  goal.target_pose.pose.orientation.w = (1.0 - rotZ * rotZ);
 
   // Send the goal position and orientation for the robot to reach
   ROS_INFO("Sending goal to  x:%f y:%f z:%f", x, y, rotZ);
@@ -49,10 +49,10 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
 
-  send_robot_to_position(ac, def::pos[0][1], def::pos[0][2], def::pos[0][3]);
+  send_robot_to_position(ac, def::pos[0][0], def::pos[0][1], def::pos[0][2]);
   ROS_INFO("Successfully reached the first position");
   sleep(5); // wait after the pickup-zone is reached
-  send_robot_to_position(ac, def::pos[1][1], def::pos[1][2], def::pos[1][3]);
+  send_robot_to_position(ac, def::pos[1][0], def::pos[1][1], def::pos[1][2]);
   ROS_INFO("Successfully reached the second position");
   return 0;
 }
