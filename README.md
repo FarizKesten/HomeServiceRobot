@@ -15,3 +15,4 @@ The project consists of the following packages:
 * turtlebot_teleop: This package contains the keyboard teleop node.
 * turtlebot_rviz_launchers: This package contains the rviz launch file.
 
+[video.webm](https://github.com/FarizKesten/HomeServiceRobot/assets/32988360/a713591d-b130-4597-8190-50e9d4edffc1)
