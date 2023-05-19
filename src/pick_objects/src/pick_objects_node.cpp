@@ -1,3 +1,4 @@
+#include "defines.h"
 #include <ros/ros.h>
 #include <move_base_msgs/MoveBaseAction.h>
 #include <actionlib/client/simple_action_client.h>
@@ -48,11 +49,10 @@ int main(int argc, char** argv){
     ROS_INFO("Waiting for the move_base action server to come up");
   }
 
-  send_robot_to_position(ac, 2.0, 3.0, -0.707);
+  send_robot_to_position(ac, def::pos[0][1], def::pos[0][2], def::pos[0][3]);
   ROS_INFO("Successfully reached the first position");
   sleep(5); // wait after the pickup-zone is reached
-  send_robot_to_position(ac, 0.5, -0.5, 0.707);
+  send_robot_to_position(ac, def::pos[1][1], def::pos[1][2], def::pos[1][3]);
   ROS_INFO("Successfully reached the second position");
-
   return 0;
 }
