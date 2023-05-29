@@ -16,7 +16,8 @@ sleep 3
 
 # Launch rviz
 source devel/setup.bash
-xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch " &
+xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch
+           rviz_config_file=$(pwd)/src/my_robot/rviz/my_robot.rviz " &
 sleep 3
 
 # Launch pick-up objects
