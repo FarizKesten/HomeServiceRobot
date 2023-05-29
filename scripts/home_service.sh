@@ -4,18 +4,20 @@
 
 # Launch turtlebot
 source devel/setup.bash
-export TURTLEBOT_GAZEBO_WORLD_FILE=/home/workspace/catkin_ws/src/turtlebot_simulator/turtlebot_gazebo/worlds/playground.world
+export TURTLEBOT_GAZEBO_WORLD_FILE="$(pwd)/src/my_robot/worlds/office.world"
 xterm -e " roslaunch turtlebot_gazebo turtlebot_world.launch " &
 sleep 3
 
 # Launch amcl demo
 source devel/setup.bash
+export TURTLEBOT_GAZEBO_MAP_FILE="$(pwd)/src/my_robot/maps/office.yaml"
 xterm -e " roslaunch turtlebot_gazebo amcl_demo.launch " &
 sleep 3
 
 # Launch rviz
 source devel/setup.bash
-xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch " &
+xterm -e " roslaunch turtlebot_rviz_launchers view_navigation.launch
+           rviz_config_file=$(pwd)/src/my_robot/rviz/my_robot.rviz " &
 sleep 3
 
 # Launch pick_objects

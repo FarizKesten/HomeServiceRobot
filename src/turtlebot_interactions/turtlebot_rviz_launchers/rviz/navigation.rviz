@@ -407,7 +407,7 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 391.600006
+          Max Intensity: 528
           Min Color: 0; 0; 0
           Min Intensity: 0
           Name: Cost Cloud
@@ -437,9 +437,9 @@ Visualization Manager:
           Enabled: true
           Invert Rainbow: false
           Max Color: 255; 255; 255
-          Max Intensity: 5.80000019
+          Max Intensity: 97.1999969
           Min Color: 0; 0; 0
-          Min Intensity: 0.600000024
+          Min Intensity: 80.5999985
           Name: Trajectory Cloud
           Position Transformer: XYZ
           Queue Size: 10
@@ -525,25 +525,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/XYOrbit
-      Distance: 10
+      Distance: 34.8013229
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 4.56123638
+        Y: -0.371881485
+        Z: -5.7220459e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.315398246
+      Pitch: 0.340398192
       Target Frame: <Fixed Frame>
       Value: XYOrbit (rviz)
-      Yaw: 6.06858397
+      Yaw: 4.62858343
     Saved: ~
 Window Geometry:
   Displays:
