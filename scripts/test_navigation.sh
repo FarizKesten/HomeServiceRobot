@@ -4,12 +4,13 @@
 
 # Launch turtlebot
 source devel/setup.bash
-export TURTLEBOT_GAZEBO_WORLD_FILE=/home/workspace/catkin_ws/src/turtlebot_simulator/turtlebot_gazebo/worlds/playground.world
+export TURTLEBOT_GAZEBO_WORLD_FILE="$(pwd)/src/my_robot/worlds/office.world"
 xterm -e " roslaunch turtlebot_gazebo turtlebot_world.launch " &
 sleep 3
 
 # Launch gmapping demo
 source devel/setup.bash
+export TURTLEBOT_GAZEBO_MAP_FILE="$(pwd)/src/my_robot/maps/office.yaml"
 xterm -e " roslaunch turtlebot_gazebo amcl_demo.launch " &
 sleep 3
 
